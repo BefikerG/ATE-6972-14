@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointment</title>
+    <link rel="stylesheet" href="appoint.css" />
+    <link rel="stylesheet" href="/navbar.css" />
+  </head>
+  <body>
+    <nav style="background: transparent">
+      <div class="logo">
+        <a href="home.html"
+          ><img src="asset/rationality-logo.png" class="logo-main" alt="Logo"
+        /></a>
+      </div>
+      <ul id="menuList">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about us.html">About</a></li>
+        <li><a href="works.html">Work</a></li>
+        <li><a href="contactUs.html">Contact</a></li>
+      </ul>
+      <div class="menu-icon">
+        <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+      </div>
+    </nav>
+    <div class="bnt1"></div>
+    <div class="container">
+      <form action="">
+        <h2>Service you want</h2>
+        <input type="text" class="input" size="40" placeholder="" />
+        <img src="down-24.png" alt="" class="v" />
+        <h2>Choose the Date</h2>
+        <input type="text" class="input2" size="40" placeholder="" /><img
+          src=""
+          alt=""
+          class="v"
+        />
+        <h2 class="h3">Additional information</h2>
+        <input type="text" class="input3" class="inout3" size="40" />
+      </form>
+      <button class="button">Submit</button>
+    </div>
+    <script>
+      let menuList = document.getElementById("menuList");
+      menuList.style.maxHeight = "0px";
+
+      function toggleMenu() {
+        if (menuList.style.maxHeight == "0px") {
+          menuList.style.maxHeight = "300px";
+        } else {
+          menuList.style.maxHeight = "0px";
+        }
+      }
+    </script>
+    <script
+      src="https://kit.fontawesome.com/f8e1a90484.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

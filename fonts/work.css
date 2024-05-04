@@ -1,0 +1,12 @@
+.firstpart{
+    display: flex;
+    justify-content: space-between;
+}
+.part1{
+    width: 60%;
+    background-color: aquamarine;
+}
+.part2{
+    width: 30%;
+    background-color: bisque;
+}

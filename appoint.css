@@ -1,0 +1,72 @@
+body {
+  background-color: black;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding-bottom: 100px;
+}
+h2 {
+  color: aliceblue;
+  margin-right: 130px;
+  font-size: 20px;
+}
+.input {
+  height: 20px;
+  background-color: black;
+  color: aliceblue;
+  border-width: 1px;
+  border-color: white;
+}
+.container {
+  text-align: center;
+  margin-top: 200px;
+}
+.v {
+  height: 20px;
+  margin-left: -25px;
+  vertical-align: middle;
+}
+input[type="text"]::placeholder {
+  background-color: black;
+}
+input {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.input2 {
+  height: 20px;
+  background-color: black;
+  color: aliceblue;
+  margin-right: 19px;
+  border-width: 1px;
+  border-color: white;
+  margin-left: 20px;
+}
+.input3 {
+  height: 70px;
+  background-color: black;
+  color: aliceblue;
+  margin-right: 20px;
+  margin-left: 40px;
+  border-color: white;
+  border-width: 1px;
+}
+.h3 {
+  margin-left: 60px;
+}
+.button {
+  margin-top: 40px;
+  height: 50px;
+  width: 100px;
+  background-color: rgb(0, 0, 0);
+  border-width: 1px;
+  border-color: white;
+  font-weight: 200;
+  font-size: 17px;
+  color: white;
+}
+.logo-main{
+  width: 300px;
+  margin-bottom: -200px;
+  margin-top: -50px;
+  margin-left: 500px;
+}

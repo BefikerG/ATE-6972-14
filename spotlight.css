@@ -1,0 +1,252 @@
+body {
+  background-color: hsl(0, 0%, 0%);
+  font-family: "poppins";
+
+  overflow-x: hidden;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(13deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(13deg);
+  }
+}
+
+.image {
+  position: absolute;
+
+  left: 5%;
+  transform: translateX(-50%);
+  animation: swing 6s infinite;
+  width: 85%;
+  height: 85%;
+  margin-top: 300px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .image {
+    width: 70% !important;
+  }
+}
+@media (max-width: 768px) {
+  .image-1 {
+    width: 70%; /* Adjust as needed */
+    max-width: 70%; /* Ensure the image doesn't exceed its container */
+    height: auto; /* Allow the height to adjust proportionally */
+    display: block; /* Ensure the image behaves as a block element */
+    visibility: hidden;
+  }
+}
+
+.hero {
+  height: 90%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-1 {
+  margin-left: 10%;
+  padding: 300px;
+  margin-top: -390px !important;
+  height: 10%;
+  width: 35%;
+  transform: translate(-50%, -50%);
+  animation: moveLeftAndRight 6s infinite;
+}
+
+.ttp {
+  color: white;
+  text-align: center;
+  margin-top: 390px;
+}
+@media (max-width: 768px) {
+  .ttp {
+    margin-top: 0px;
+    width: 100%;
+  }
+}
+
+/* Updated CSS for mobile responsiveness */
+@media (max-width: 768px) {
+  .image {
+    position: relative;
+    left: 0;
+    transform: none;
+    width: 100%;
+    height: auto;
+    margin-top: -90px; /* Adjust*/
+  }
+}
+
+.service {
+  text-align: center;
+  color: #fff;
+  margin-top: 90px;
+}
+
+.videography {
+}
+.branding {
+}
+.rent {
+}
+.icons {
+  margin-left: 230px;
+  width: 70%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center !important;
+}
+
+.vid {
+  margin-right: 100px;
+}
+.cam {
+  margin-left: 100px;
+}
+.ren {
+  margin-left: 100px;
+}
+.bra {
+}
+.vid-production {
+  color: aliceblue;
+  text-align: center;
+  margin-top: 15px;
+}
+.brand {
+  color: aliceblue;
+  text-align: center;
+  margin-right: 50px;
+  margin-top: 15px;
+}
+.photography {
+  color: aliceblue;
+  text-align: center;
+  margin-left: -10px;
+  margin-top: 15px;
+}
+.rental {
+  color: aliceblue;
+  text-align: center;
+  margin-top: 15px;
+  margin-left: -5px;
+}
+.paragraphs {
+  font-size: 20px;
+}
+
+/* Updated CSS for mobile responsiveness */
+@media (max-width: 768px) {
+  .icons {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .vid,
+  .bra,
+  .ren,
+  .cam {
+    margin-left: -98px;
+
+    margin-bottom: 20px; /* Adjust as needed */
+  }
+
+  .vid .vid-production,
+  .bra .brand,
+  .ren .rental,
+  .cam .photography {
+    text-align: center;
+    margin-top: 7px !important; /* Adjust as needed */
+  }
+  .vid-production,
+  .brand,
+  .rental,
+  .photography {
+    margin-left: 80px !important;
+  }
+}
+
+.client {
+  clear: left;
+  margin-top: 60px;
+  text-align: center;
+  color: #fff;
+}
+.client-logo {
+  margin: 7%;
+
+  margin-top: 0% !important;
+  text-align: center;
+}
+
+.client-logo .client-list {
+  margin: 5%;
+  margin-bottom: -15px !important;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+  transition: transform 0.3s;
+}
+
+.client-logo .client-list:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  transition: filter 0.3s;
+  transition: transform 0.3s;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin: 0 10px;
+  transition: filter 0.3s;
+  transition: transform 0.3s;
+}
+
+.social-icons a {
+  display: block;
+  transition: filter 0.3s;
+  transition: transform 0.3s;
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+@media (max-width: 767px) {
+  .social-icons li {
+    margin: 0 5px;
+    width: 10%;
+  }
+
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+    transform: scale(1);
+  }
+}

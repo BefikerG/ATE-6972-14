@@ -1,0 +1,48 @@
+.container {
+  text-align: center;
+  margin-top: 200px;
+}
+.input {
+  height: 40px;
+  background-color: black;
+  color: aliceblue;
+  border-color: white;
+  border-width: 1px;
+}
+.input2 {
+  height: 40px;
+  background-color: black;
+  color: aliceblue;
+  margin-top: 20px;
+  border-width: 1px;
+  border-color: white;
+}
+
+body {
+  background-color: black;
+}
+a {
+  margin-top: 20px;
+  color: white;
+  text-decoration: none;
+  margin-top: 100px;
+}
+.abt {
+  text-align: center;
+}
+.size {
+  font-size: 24px;
+}
+div {
+  text-align: center;
+  margin-top: 20px;
+}
+h1 {
+  color: aliceblue;
+  margin-bottom: 20px;
+}
+.logo-main{
+  width: 300px;
+  margin-bottom: -100px;
+  margin-top: -50px;
+}

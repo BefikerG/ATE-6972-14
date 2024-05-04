@@ -1,0 +1,312 @@
+@font-face {
+  font-family: neue;
+  src: url(fonts/NeueHaasDisplayBlack.ttf);
+}
+@font-face {
+  font-family: neu;
+  src: url(fonts/NeueHaasDisplayLight.ttf);
+}
+@font-face {
+  font-family: nu;
+  src: url(fonts/NeueHaasDisplayThin.ttf);
+}
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+@media (max-width: 767px) {
+  body {
+    background-attachment: scroll; /* Change background attachment to scroll on mobile */
+  }
+}
+.luca {
+  background-image: url("luca-nicoletti-CTIwWCnTL2M-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%; /* Set the width to 100% of its parent container */
+  height: 90vh; /* Set the height to 90% of the viewport height */
+
+  /* Mobile view */
+  @media (max-width: 767px) {
+    height: 50vh; /* Adjust the height for mobile devices */
+  }
+}
+
+@keyframes twinkle {
+  0% {
+    filter: brightness(50%);
+  }
+  50% {
+    filter: brightness(100%);
+  }
+  100% {
+    filter: brightness(50%);
+  }
+}
+
+.stars img {
+  animation: twinkle 3s infinite;
+  margin-left: 100px;
+}
+
+.star_1 {
+  margin-bottom: 10%;
+}
+
+.star_2 {
+  margin-bottom: 20%;
+}
+
+.star_3 {
+  margin-bottom: 25px;
+}
+
+.star_4 {
+  margin-bottom: 160px;
+}
+
+.star_5 {
+  margin-bottom: 5px;
+}
+.star_6 {
+  margin-bottom: 80px;
+}
+.star_7 {
+  margin-bottom: 9px;
+}
+
+@media (max-width: 767px) {
+  .stars img {
+    margin-left: 2%; /* Adjust the left margin for smaller screens */
+  }
+
+  .star_1,
+  .star_2,
+  .star_3,
+  .star_4,
+  .star_5,
+  .star_6,
+  .star_7 {
+    margin-bottom: 10px; /* Adjust the bottom margin for smaller screens */
+  }
+}
+
+.banner {
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  margin-top: -231px;
+  z-index: 9999;
+  position: relative;
+  font-family: neue;
+}
+@media (max-width: 767px) {
+  .banner {
+    font-size: 11px; /* Adjust the font size for smaller screens */
+    margin-top: -100px; /* Adjust the top margin for smaller screens */
+    margin-left: 41 !important;
+    text-align: center;
+    width: 350px;
+  }
+}
+
+footer {
+  margin-top: 40px;
+}
+.tri {
+  font-family: neue;
+}
+
+.p-1 {
+  margin-top: -3px;
+  font-size: 20px;
+  font-family: neu;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 767px) {
+  .p-1 {
+    font-size: 10px; /* Adjust the font size for smaller screens */
+    letter-spacing: 1px; /* Adjust the letter spacing for smaller screens */
+  }
+}
+
+.pa {
+  color: white;
+  width: 65%;
+  text-align: center;
+  margin-left: 250px;
+  margin-top: -1%;
+  font-family: nu;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 767px) {
+  .pa {
+    width: 70%; /* Adjust the width for smaller screens */
+    margin-left: 51px; /* Remove the left margin for smaller screens */
+    font-size: 9px; /* Adjust the font size for smaller screens */
+    line-height: 13px; /* Adjust the line height for smaller screens */
+    letter-spacing: 1px; /* Adjust the letter spacing for smaller screens */
+    margin-top: -200px;
+  }
+}
+
+.team {
+  text-align: center;
+  color: #fff;
+  font-size: larger;
+  margin-top: 9%;
+  margin-bottom: 50px;
+}
+.team-2 {
+  height: 225px;
+}
+
+.ceo {
+  font-size: 14px;
+  font-family: "nu";
+  margin-left: 5px;
+}
+
+.image-container {
+  position: relative;
+  width: 150px;
+
+  margin: 0 5px 5px 0; /* Add margin for gap effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 600px;
+  margin-bottom: -50px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: brightness(50%);
+  transition: filter 0.5s;
+}
+
+.image-container:hover img {
+  filter: brightness(60%);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 140px);
+  grid-column-gap: 30px; /* Adjust horizontal gap */
+  grid-row-gap: 20px;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.image-containerr {
+  position: relative;
+  width: 150px;
+
+  margin: 0 5px 5px 0; /* Add margin for gap effect */
+}
+
+.image-containerr img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  filter: brightness(50%);
+  transition: filter 0.5s;
+}
+
+.image-containerr:hover img {
+  filter: brightness(100%);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.job-title {
+  font-size: 16px;
+  text-align: center;
+}
+
+.image-containerr:hover .overlay {
+  opacity: 1;
+}
+
+/* Media query for screens smaller than 768px (typical mobile devices) */
+@media (max-width: 768px) {
+  .team {
+    font-size: medium; /* Adjusted font size for smaller screens */
+    margin-top: 3%; /* Further adjusted for smaller screens */
+    margin-bottom: 20px; /* Further adjusted for smaller screens */
+  }
+
+  .team-2 {
+    height: 150px; /* Adjusted height for smaller screens */
+  }
+
+  .ceo {
+    font-size: 12px; /* Adjusted font size for smaller screens */
+    margin-left: 3px; /* Adjusted margin for smaller screens */
+  }
+
+  .image-container {
+    width: 100px; /* Adjusted width for smaller screens */
+    margin: 0 3px 3px 0; /* Adjusted margin for smaller screens */
+    margin-left: 10px; /* Further adjusted for smaller screens */
+    margin-bottom: -20px; /* Further adjusted for smaller screens */
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(100px, 1fr)
+    ); /* Adjusted for responsiveness */
+    grid-gap: 10px; /* Adjusted gap for responsiveness */
+    margin-top: 20px; /* Adjusted for smaller screens */
+  }
+
+  .image-containerr {
+    max-width: 100px; /* Adjusted max-width for smaller screens */
+  }
+
+  .job-title {
+    font-size: 14px; /* Adjusted font size for smaller screens */
+  }
+}

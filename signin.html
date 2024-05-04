@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link rel="stylesheet" href="signin.css" />
+    <link rel="stylesheet" href="/navbar.css" />
+  </head>
+  <body>
+    <nav style="background: transparent">
+      <div class="logo">
+        <a href="home.html"
+          ><img src="asset/rationality-logo.png" class="logo-main" alt="Logo"
+        /></a>
+      </div>
+      <ul id="menuList">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about us.html">About</a></li>
+        <li><a href="works.html">Work</a></li>
+        <li><a href="contactUs.html">Contact</a></li>
+      </ul>
+      <div class="menu-icon">
+        <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>Sign In</h1>
+      <input type="text" class="input" size="40" placeholder="  Email" /> <br />
+
+      <input
+        type="text"
+        class="input2"
+        size="40"
+        placeholder="  Password"
+      /><br />
+
+      <input
+        type="text"
+        class="input2"
+        size="40"
+        placeholder="  Confirm Password"
+      /><br />
+    </div>
+    <div>
+      <button class="button">Sign In</button>
+    </div>
+
+<div class="signin"><a href="appointment.html" style="display: block; text-align: center; margin-top: 50px; color: white; font-size: 15px;">Make an appointment</a></div>
+<div class="signin"><a href="login.html" style="display: block; text-align: center; margin-top: 50px; color: white; font-size: 15px;">If you have account log in</a></div>
+
+<div class="big-client">
+    <script>
+      let menuList = document.getElementById("menuList");
+      menuList.style.maxHeight = "0px";
+
+      function toggleMenu() {
+        if (menuList.style.maxHeight == "0px") {
+          menuList.style.maxHeight = "300px";
+        } else {
+          menuList.style.maxHeight = "0px";
+        }
+      }
+    </script>
+    <script
+      src="https://kit.fontawesome.com/f8e1a90484.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
