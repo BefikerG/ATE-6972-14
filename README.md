@@ -1,5 +1,5 @@
 # ATE/6972/14
-Wireframe and site diagram concept assignment for rational creative studios
+Wireframe, site diagram concept and full website design assignment for rational creative studios
 
 ## Group members
 * Mehereteab Esayas   ATE/7353/14
