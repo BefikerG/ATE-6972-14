@@ -1,0 +1,159 @@
+body {
+  text-align: center;
+}
+.video-boxes {
+  margin-left: -200px;
+  margin-bottom: 100px;
+}
+.video-box-1,
+.video-box-2 {
+  display: inline-block !important;
+  text-align: center;
+  margin-left: 250px;
+}
+.ifram-1,
+.ifram-2 {
+  display: inline-block;
+  margin-right: 10px; /* Add some space between the iframes */
+}
+
+.ifram-1 {
+  margin-top: 50px;
+}
+.iframe-3,
+.iframe-4 {
+  display: inline-block;
+  margin-right: 10px; /* Add some space between the iframes */
+}
+
+.video-box-3 {
+  width: 100%;
+  margin-left: 150px;
+  gap: 15px;
+}
+.slider-container {
+  display: flex;
+  align-items: center;
+  width: 70%;
+}
+
+.slider {
+  flex: 1;
+  position: relative;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+.photography {
+  font-size: 36px;
+  margin-left: 20px;
+}
+
+.slider {
+  height: 250px;
+  margin: auto;
+  position: relative;
+  width: 30%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  margin-left: 150px;
+}
+
+.slide-truck {
+  display: flex;
+  width: calc(250px * 24);
+  animation: scroll 40s linear infinite;
+}
+.slide-truck:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 12));
+  }
+}
+
+.slide {
+  height: 200px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  padding: 1px;
+  perspective: 100px;
+}
+img {
+  width: 100%;
+}
+img:hover {
+  transform: translateZ(20px);
+}
+.slider::before,
+.slider::after {
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ("180deg");
+}
+
+/* For mobile view */
+@media (max-width: 767px) {
+  .video-boxes {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Add space between iframes */
+    width: 100%; /* Make iframes fill the width of the container */
+    margin-left: -150px;
+    gap: 5px;
+  }
+  .video-box-1,
+  .video-box-2 {
+    margin-left: 173px;
+  }
+  .video-box-3 {
+    margin-left: 173px;
+  }
+}
+
+@media (max-width: 767px) {
+  .slider-container {
+    width: 100%; /* Make the container full width on mobile */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slider {
+    width: 100%; /* Make the slider full width on mobile */
+    margin: auto; /* Center the slider */
+    margin-top: 20px; /* Add some space to the top */
+  }
+
+  .photography {
+    font-size: 24px; /* Decrease font size for smaller screens */
+    margin-top: 20px; /* Add some space to the top */
+
+    margin-left: 173px !important;
+  }
+}

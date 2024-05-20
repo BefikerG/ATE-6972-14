@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contactUs.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="trident favi-01.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+<nav style="background: transparent;">
+    <div class="logo">
+        <a href="home.html"><img src="asset/rationality-logo.png" class="logo-main" alt="Logo" /></a>
+    </div>
+    <ul id="menuList">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about us.html">About</a></li>
+        <li><a href="works.html">Work</a></li>
+        <li><a href="contactUs.html">Contact</a></li>
+    </ul>
+    <div class="menu-icon">
+        <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="content">
+        <div class="col-1">
+            <h1>Contact Us</h1>
+            <div class="address-line">
+                <img alt="location" src="image/marker.png" class="icon">
+                <div class="contact-info">
+                    <div class="contact-info-title address" >Address</div>
+                    <div>Ethiopia, Addis Ababa</div>
+                    <div>5 killo</div>
+                </div>
+            </div>
+            <div class="address-line">
+                <img alt="location" src="image/phone.png" class="icon">
+                <div class="contact-info">
+                    <div class="contact-info-title phone">Phone</div>
+                    <div><a href="tel:+251930363774">+25-19-77-09-26-82</a></div>
+                    <div><a href="tel:+251911257521">+25-19-77-09-26-82</a></div>
+                </div>
+            </div>
+            <div class="address-line">
+                <img alt="location" src="image/mail.png" class="icon">
+                <div class="contact-info">
+                    <div class="contact-info-title email">Email</div>
+                    <div><a href="mailto:andualemyaregalmin@gmail.com" class="email1">andualemyar@gmail.com</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero">
+            <form onsubmit="handleSubmit(event)">
+                <div class="input">
+                    <input type="hidden" name="access_key" value="67615c1b-970c-44a0-ae11-fa70a9394cac">
+                    <input type="text" id="name" name="name" required />
+                    <label for="name">Your Name</label>
+                </div>
+
+                <div class="input">
+                    <input type="email" id="Email" name="email" required />
+                    <label for="Email">Email</label>
+                </div>
+
+                <div class="input">
+                    <textarea id="message" name="message" rows="8" required></textarea>
+                    <label for="message">Your message</label>
+                </div>
+                <button type="submit" class="Submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+
+  let username;
+  let email;
+  let message;
+  const nameInput = document.getElementById('name');
+  nameInput.addEventListener('input', function(event) {
+    username = event.target.value;
+    console.log('Name:', event.target.value);
+  });
+
+  const emailInput = document.getElementById('Email');
+  emailInput.addEventListener('input', function(event) {
+    email = event.target.value;
+    console.log('Email:', event.target.value);
+  });
+
+  const messageInput = document.getElementById('message');
+  messageInput.addEventListener('input', function(event) {
+    message = event.target.value;
+    console.log('Message:', event.target.value);
+  });
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log(username, email, message);
+    // document.getElementById('sendData').addEventListener('click', function() {
+      const data = {
+        name: username,
+        email: email,
+        message: message
+      }
+
+
+      const xhr = new XMLHttpRequest();
+
+      xhr.open('POST', 'http://localhost:3000/contact-us'); // Change the URL accordingly
+      xhr.setRequestHeader('Content-Type', 'application/json');
+
+      // Define what happens on successful data submission
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          console.log('Data sent successfully.');
+        } else {
+          console.error('Error:', xhr.status);
+        }
+      };
+
+      // Define what happens in case of an error
+      xhr.onerror = function() {
+        console.error('Request failed.');
+      };
+
+      // Send the request
+      xhr.send(JSON.stringify(data));
+    // });
+  }
+
+  let menuList = document.getElementById("menuList");
+  menuList.style.maxHeight = "0px";
+
+  function toggleMenu() {
+    if (menuList.style.maxHeight == "0px") {
+      menuList.style.maxHeight = "300px";
+    } else {
+      menuList.style.maxHeight = "0px";
+    }
+  }
+</script>
+<script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
+</body>
+</html>
